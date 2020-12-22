@@ -333,7 +333,8 @@ nav ul li a{
     height: 100vh;
     z-index: 1;
 }
-.dark #projects::after, #projects::after{
+.dark #projects::after,
+#projects::after{
     content:'PROJECTS';
     position: absolute;
     left: -10px;
@@ -364,7 +365,6 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-between; */
 }
 .dark #projects .card{
     background-color: #fcfcfc;
@@ -517,12 +517,42 @@ nav ul li a{
     width: 100%;
     height: 92vh;
 }
+.dark #education::after, #education::after{
+    content:'EXPERIENCE & EDUCATION';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    z-index: -1;
+    color: rgba(200,200,200,.1);
+}
+#education::after{
+    color:rgba(0,0,0,.1)
+}
+
+
 #education .icon i{
     font-size: 30px;
     color: #6c757d;
 }
-.dark #education .icon i{
-    color: #fd7e14;
+#education .icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    line-height: 40px;
+    text-align: center;
+    z-index: 1;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #4169e1;;
+}
+#education .icon .fa{
+    font-size: 14px;
+    color: white;
 }
 .dark #education{
     color: white;
@@ -535,13 +565,70 @@ nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding:0 20px 0 60px;
+    margin: 0 0 50px;
 }
-/* #education ul li{
-  border-left: 1px solid #ddd;
+.dark #education .exp1::after,
+.dark #education .exp2::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    border-left: 1px solid #fcfcfc;
 }
-#education .time, #education p{
-    background-color: #666;
-} */
+#education .exp1::after,
+#education .exp2::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    border-left: 1px solid #333;
+}
+#education .info{
+    margin-left: 1.2rem;
+}
+#education .resume-box .time{
+    color: #fff;
+    font-size: 12px;
+    padding: 1px 10px;
+    display: inline-block;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: #111;
+    opacity: .8;
+}
+#education .resume-box h5{
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 7px 0 10px;
+}
+#education .resume-box .place{
+    opacity: .8;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    padding-left: 26px;
+}
+#education .resume-box .place::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    left: 7px;
+    top: 9px;
+    opacity: .8;
+}
+.dark #education .resume-box p{
+    margin: 0;
+    color: #eee;
+    font-size: 14px;
+}
+#education .resume-box p{
+    color: #333;
+}
 
 
 @keyframes scale-up{
@@ -823,6 +910,12 @@ nav ul li a{
     #projects{
         height: 300vh;
     }
+    #education{
+        flex-direction: column;
+    }
+    #education{
+        padding: 1em;
+    }
 }
 
 @media (max-width:500px){
@@ -843,5 +936,8 @@ nav ul li a{
     }
     #projects .card-tags span{
         margin-right: 0;
+    }
+    #education .resume-box h5{
+        font-size: 17px;
     }
 }
