@@ -3,20 +3,6 @@ const links = Array.from(document.querySelectorAll('.anchor'))
 const nav = document.querySelector('nav')
 
 
-// document.addEventListener('scroll', ()=>{
-//     var scroll_position = window.scrollY;
-//     if(scroll_position > 120){
-//         if(document.body.classList.contains("dark")){
-//             nav.style.backgroundColor = '#22303C';
-//         }
-//         else{
-//             nav.style.backgroundColor = "#fff"
-//         }
-//     }else{
-//         nav.style.backgroundColor = 'transparent';
-//     }
-// });
-
 
 const tabs = document.querySelectorAll('[data-target-tab]')
 const tabContents = document.querySelectorAll('.content')
