@@ -883,6 +883,9 @@ nav ul li a{
         width: 200px;
         height: 200px;
     }
+    nav ul{
+        width: 60%;
+    }
 }
 @media (max-width:900px){
     nav{
@@ -910,6 +913,7 @@ nav ul li a{
         transform: translateX(-100%);
         transition: all .2s ease-in;
     }
+
     nav ul li{
         display: flex;
         justify-content: center;
@@ -918,6 +922,9 @@ nav ul li a{
         height:50px;
         padding:10px 30px;
         margin: 40px;
+    }
+    nav ul li:nth-of-type(1){
+        margin-top:-20px;
     }
     nav ul li::after{
         background-color: white;
