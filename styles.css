@@ -82,7 +82,7 @@ nav{
 }
 
 .dark nav{
-    background-color: #22303C;
+    background-color: #272626;
     box-shadow: 0 0 0 0;
 }
 
@@ -195,6 +195,7 @@ nav ul li a{
     right: 0;
     font-size: 4rem;
     color: rgba(200,200,200,.1);
+    z-index: -1;
 }
 #home::after{
     color: rgba(0,0,0,.1)
@@ -337,15 +338,21 @@ nav ul li a{
 #projects::after{
     content:'PROJECTS';
     position: absolute;
-    left: -10px;
-    right: 0;
-    bottom:1%;
+    top: 50%;
+    right: -5%;
     font-size: 4rem;
+    transform: rotate(90deg);
     z-index: -1;
     color: rgba(200,200,200,.1);
 }
 #projects::after{
     color:rgba(0,0,0,.1)
+}
+#projects .header p{
+    color: #212121;
+}
+.dark #projects .header p{
+    color: #ccc;
 }
 .card-container{
     display: flex;
@@ -452,10 +459,10 @@ nav ul li a{
 }
 
 .skill-container ul{
-    background-color: #22303C;
+    background-color: #353535;
 }
 .dark .skill-container ul{
-    background-color: white;
+    background-color: #ccc;
 }
 .skill-container ul li,
 .dark .skill-container ul li{
@@ -468,12 +475,16 @@ nav ul li a{
     transition: all .3s linear;
 }
 .skill-container ul li{
-    color: white;
+    color: #ccc;
 }
 .dark .skill-container ul li{
     color: #22303c;
 }
+.dark .skill-container .content{
+    color: #ccc;
+}
 .skill-container .content{
+    color: #353535;
     display: none;
 }
 .skill-container .content.active{
@@ -504,9 +515,31 @@ nav ul li a{
     border-left: 4px solid #22303C;
     transform: scale(1);
 }
+.skill-container ul li:hover,
+.skill-container ul li.active{
+    color: #fcfcfc;
+}
+.dark .skill-container ul li:hover,
+.dark .skill-container ul li.active{
+    color: #111;
+}
 .skill-container #explore{
     font-size: 1rem;
 }
+#skills .skill-el{
+    margin-top:1.5em;
+}
+#skills .skill-el span{
+    background-color: #353535;
+    color: #ccc;
+    font-size: .9rem;
+    padding: .5em;
+}
+.dark #skills .skill-el span{
+    background-color: #ccc;
+    color:#272626
+}
+
 /* education */
 #education{
     position: relative;
@@ -826,8 +859,7 @@ nav ul li a{
         width: 55%;
     }
     .skill-container{
-        max-width: 90%;
-        margin: 0 8px;
+        padding: .6em;
     }
     .skill-container .content{
         margin-left: 10px;
@@ -924,13 +956,18 @@ nav ul li a{
     }
     .skill-container{
         flex-direction: column;
+        margin-top: 70px;
+        justify-content: center;
     }
     .skill-container ul{
+        margin-bottom: 50px;
         display: flex;
         padding: 1rem;
         font-size: 1rem;
         height: 80px;
         align-items: center;
+        min-width: 90%;
+        justify-content: space-between;
 
     }
     .skill-container ul li{
@@ -964,6 +1001,9 @@ nav ul li a{
     #education{
         padding: 1em;
     }
+    #footer{
+        margin-top: 200px;
+    }
 }
 
 @media (max-width:500px){
@@ -987,5 +1027,24 @@ nav ul li a{
     }
     #education .resume-box h5{
         font-size: 17px;
+    }
+    #footer{
+        height: 50vh;
+        margin-top: 260px;
+    }
+    #footer .content{
+        flex-direction: column;
+    }
+    #footer .footer-links{
+        margin-bottom: 50px;
+    }
+    #footer .copyright{
+        top: 85%;
+    }
+}
+
+@media(max-width:400px){
+    #footer{
+        margin-top: 300px;
     }
 }
