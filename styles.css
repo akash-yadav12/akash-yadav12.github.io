@@ -79,6 +79,7 @@ nav{
     transition: all .3s ease-in-out;
     z-index: 100;
     background-color: #fcfcfc;
+    animation: onload 1s forwards;
 }
 
 .dark nav{
@@ -711,6 +712,14 @@ nav ul li a{
     padding-top:1rem;
 }
 
+@keyframes onload{
+    0%{
+        top: -10%;
+    }
+    100%{
+        top: 0;
+    }
+}
 
 @keyframes scale-up{
     0%{
@@ -954,11 +963,13 @@ nav ul li a{
     #projects{
         height: 150vh;
     }
+    .dark .skill-container,
     .skill-container{
         flex-direction: column;
         margin-top: 70px;
         justify-content: center;
     }
+    .dark .skill-container ul,
     .skill-container ul{
         margin-bottom: 50px;
         display: flex;
