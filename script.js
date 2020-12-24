@@ -8,6 +8,9 @@ const tabs = document.querySelectorAll('[data-target-tab]')
 const tabContents = document.querySelectorAll('.content')
 
 
+console.log("%cMADE WITH ❤ By Akash Yadav","font-weight:bold; font-size:4rem; color:#f1c40f;")
+
+
 tabs.forEach(tab=>{
     tab.addEventListener('click', ()=>{
         const target = document.querySelector(tab.dataset.targetTab)
