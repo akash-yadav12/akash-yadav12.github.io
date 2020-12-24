@@ -7,8 +7,27 @@ const nav = document.querySelector('nav')
 const tabs = document.querySelectorAll('[data-target-tab]')
 const tabContents = document.querySelectorAll('.content')
 
+document.addEventListener('scroll',scrollAppear)
+scrollAppear()
+function scrollAppear(){
+    var skillsUL = document.querySelector('.skill-container ul');
+    const skillContent = document.querySelector('.skill-container .content')
+    var skillPosition = skillsUL.getBoundingClientRect().top;
+    const cardContainer = document.querySelector('.card-container')
+    const cardPosition = cardContainer.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight/1.2
+    // console.log(skillPosition,screenPosition)
 
-console.log("%cMADE WITH ❤ By Akash Yadav","font-weight:bold; font-size:4rem; color:#f1c40f;")
+    if (skillPosition < screenPosition ){
+        skillsUL.classList.add('animated')
+        skillContent.classList.add('animated')
+    }
+    if(cardPosition < screenPosition){
+        cardContainer.classList.add('animated')
+    }
+}
+
+
 
 
 tabs.forEach(tab=>{
@@ -83,3 +102,5 @@ function parallax(e){
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
     })
 }
+
+console.log("%cMADE WITH ❤ By Akash Yadav","font-weight:bold; font-size:4rem; color:#f1c40f;")
