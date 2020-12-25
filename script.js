@@ -11,10 +11,13 @@ document.addEventListener('scroll',scrollAppear)
 scrollAppear()
 function scrollAppear(){
     var skillsUL = document.querySelector('.skill-container ul');
-    const skillContent = document.querySelector('.skill-container .content')
+    const skillContent = document.querySelector('.skill-container .tab-content')
     var skillPosition = skillsUL.getBoundingClientRect().top;
     const cardContainer = document.querySelector('.card-container')
     const cardPosition = cardContainer.getBoundingClientRect().top;
+
+    const education = document.querySelector('#education')
+    const educationPosition = education.getBoundingClientRect().top;
     var screenPosition = window.innerHeight/1.2
     // console.log(skillPosition,screenPosition)
 
@@ -25,6 +28,11 @@ function scrollAppear(){
     if(cardPosition < screenPosition){
         cardContainer.classList.add('animated')
     }
+
+    if (educationPosition < screenPosition){
+        education.classList.add('animated')
+    }
+
 }
 
 
@@ -68,10 +76,10 @@ checkbox.addEventListener('change',()=>{
 
 const img = document.querySelector('#akash')
 img.addEventListener('mouseover', ()=>{
-    img.src = "./images1/img2.jpeg"
+    img.src = "./images/wink.jpeg"
 }) 
 img.addEventListener('mouseout',()=>{
-    img.src = "./images1/smile.jpeg"
+    img.src = "./images/smile.jpeg"
 })
 
 
@@ -103,4 +111,4 @@ function parallax(e){
     })
 }
 
-console.log("%cMADE WITH ❤ By Akash Yadav","font-weight:bold; font-size:4rem; color:#f1c40f;")
+console.log("%cBuilt With pure CSS AND vanilla Javascript By Akash Yadav ❤","font-weight:bold; font-size:3rem; color:#f1c40f;")

@@ -454,6 +454,17 @@ nav ul li a{
 #skills::after{
     color:rgba(0,0,0,.1)
 }
+#skills::before,.dark #skills::before{
+    content: "SKILLS";
+    position: absolute;
+    left: 1%;
+    top: 6%;
+    font-size: 4rem;
+    color: rgba(200,200,200,.1);
+}
+#skills::before{
+    color:rgba(0,0,0,.1)
+}
 
 .skill-container,
 .dark .skill-container{
@@ -483,7 +494,7 @@ nav ul li a{
     transform: translateX(0);
 }
 .dark .skill-container ul{
-    background-color: #ccc;
+    background-color: #fcfcfc;
 }
 .skill-container ul li,
 .dark .skill-container ul li{
@@ -502,18 +513,20 @@ nav ul li a{
     color: #22303c;
 }
 .dark .skill-container .content{
-    color: #ccc;
+    color: #fcfcfc;
 }
 .skill-container .content{
     color: #353535;
     display: none;
+}
+.skill-container .tab-content{
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateY(100px);
     transition: all 1s ease-in-out;
 }
-.skill-container .content.animated{
+.skill-container .tab-content.animated{
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 .skill-container .content.active{
     display: block;
@@ -564,7 +577,7 @@ nav ul li a{
     padding: .5em;
 }
 .dark #skills .skill-el span{
-    background-color: #ccc;
+    background-color: #fcfcfc;
     color:#272626
 }
 
@@ -577,6 +590,13 @@ nav ul li a{
     top: 16vh;
     width: 100%;
     height: 92vh;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+}
+#education.animated{
+    opacity: 1;
+    transform: translateY(0);
 }
 .dark #education::after, #education::after{
     content:'EXPERIENCE & EDUCATION';
