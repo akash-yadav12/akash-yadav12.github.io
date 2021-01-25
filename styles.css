@@ -16,6 +16,21 @@
     --animation-duration: 1s;
 }
 
+html{
+    scroll-behavior: smooth;
+    transition: scroll-behavior .5s linear;
+    font-family: 'Langar', cursive;
+
+}
+body{
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    transition: background-color var(--transition-duration) ease-in-out;
+}
+
+body.dark{
+    background-color: var(--dark-background-color);
+}
 #scroll-down{
     position: absolute;
     font-size: 1.2rem;
@@ -32,21 +47,6 @@
 #scroll-down a{
     color: #000;
     text-decoration: none;
-}
-html{
-    scroll-behavior: smooth;
-    transition: scroll-behavior .5s linear;
-    font-family: 'Langar', cursive;
-
-}
-body{
-    background-color: var(--background-color);
-    overflow-x: hidden;
-    transition: background-color var(--transition-duration) ease-in-out;
-}
-
-body.dark{
-    background-color: var(--dark-background-color);
 }
 #parallax,
 #parallax-projects{
@@ -731,7 +731,7 @@ nav ul li a{
 
 #footer .content .footer-links a{
     display: block;
-    color: #ccc;
+    color: #dcdcdc;
     font-size: 1.2rem;
     text-decoration: none;
     position: relative;
@@ -739,11 +739,18 @@ nav ul li a{
     transform: translateX(-50%);
     margin-top:5px;
 }
+#footer .content .footer-links a:hover{
+    color:white;
+}
+
 
 .social-footer a{
     margin: .5em;
     font-size: 25px;
     color: #ccc;
+}
+.social-footer a:hover{
+    color: white;
 }
 .social-footer .top-scroll a{
     text-align: center;
@@ -1062,10 +1069,14 @@ nav ul li a{
 
 @media (max-width:500px){
     #home img{
-        margin-top: 50px;
+        margin-top: 60px;
         width: 150px;
         height: 150px;
     }
+    .social{
+        margin-top: 10px;
+    }
+
     .skill-container ul li,
     .dark .skill-container ul li{
         margin:.4em;
