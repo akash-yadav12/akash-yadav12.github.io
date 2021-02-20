@@ -112,3 +112,10 @@ function parallax(e){
 }
 
 console.log("%cBuilt With pure CSS AND vanilla Javascript By Akash Yadav ❤","font-weight:bold; font-size:3rem; color:#f1c40f;")
+
+
+const copyYear = document.querySelector('.copy-year')
+
+const currentYear = new Date().getFullYear()
+
+copyYear.textContent = currentYear
