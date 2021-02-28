@@ -369,7 +369,7 @@ nav ul li a{
     justify-content: center;
     opacity: 0;
     transform: translateY(100px);
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 .card-container.animated{
     opacity: 1;
@@ -407,7 +407,7 @@ nav ul li a{
     padding-bottom: 1rem;
 }
 #projects .info{
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: relative;
     top: 30%;
     padding:0 .5em;
@@ -490,7 +490,7 @@ nav ul li a{
     background-color: #353535;
     opacity: 0;
     transform: translateX(-80px);
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 .skill-container ul.animated{
     opacity: 1;
@@ -525,7 +525,7 @@ nav ul li a{
 .skill-container .tab-content{
     opacity: 0;
     transform: translateY(100px);
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 .skill-container .tab-content.animated{
     opacity: 1;
@@ -595,7 +595,7 @@ nav ul li a{
     min-height: 92vh;
     opacity: 0;
     transform: translateY(100px);
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 #education.animated{
     opacity: 1;
