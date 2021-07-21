@@ -182,7 +182,6 @@ nav ul li a{
     border-radius:50%;
     height: 220px;
     width: 220px;
-    animation: waveyy 4s forwards;
 }
 
 #hello-emoji{
@@ -458,7 +457,7 @@ nav ul li a{
     color:rgba(0,0,0,.1)
 }
 #skills::before,.dark #skills::before{
-    content: "SKILLS";
+    content: "ABOUT ME";
     position: absolute;
     left: 1%;
     top: 6%;

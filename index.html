@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akash Yadav</title>
 
+    <link rel="icon" href="./images/rel.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <script src="script.js" defer></script>
 </head>
-<body class="">
+<body>
 
 
     <section id="parallax">
@@ -26,11 +27,11 @@
     <section id="main-cont">
         <nav>
             <div class="logo">
-                Akash Yadav
+                <i class="fas fa-less-than"></i><span style="font-weight: 500;">AY</span>/<i class="fas fa-greater-than"></i>
             </div>
             <ul>
                 <li class="nav-link active"><a href="#main-cont" class="anchor">Home</a></li>
-                <li class="nav-link"><a href="#skills" class="anchor">Skills</a></li>
+                <li class="nav-link"><a href="#skills" class="anchor">About</a></li>
                 <li class="nav-link"><a href="#projects" class="anchor">Projects</a></li>
                 <li class="nav-link"><a href="#education" class="anchor">Experience</a></li>
                 <input type="checkbox" id="checkbox" title="Theme toggle">
@@ -64,7 +65,7 @@
                     <span class="name-me">I'm Akash Yadav</span>
                 </h2>
                 <br>
-                <p class="me-about">A&nbsp; <span>Javascript Developer</span>&nbsp; who will probably make most of the things using Javascript.<br>
+                <p class="me-about">A&nbsp; <span>Javascript Developer</span>&nbsp; who loves to code in Javascript.<br>
                      Also I have some serious liking towards <span>CSS</span></p>
                 <div id="explore">
                     <a href="#projects">Explore &rarr;</a>
@@ -72,11 +73,11 @@
                 </div>
                 <div class="social">
                     <a href="https://github.com/akash-yadav12" title="github"><i class="fab fa-github"></i></a>
-                    <a href="https://codepen.io/akash-yadav12" title="codepen"><i class="fab fa-codepen"></i></a>
-                    <a href="mailto:akashrsy123@gmail.com" title="mail"><i class="fas fa-envelope"></i></a>
-                    <!-- <a href="https://www.facebook.com/profile.php?id=100012470379669" title="facebook"><i class="fab fa-facebook-f"></i></a> -->
+                    <a href="https://stackoverflow.com/users/13539130/soraku02" title="stackoverflow"><i class="fab fa-stack-overflow"></i></a>
                     <a href="https://www.linkedin.com/in/akash-yadav-b2b066170/" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://codepen.io/akash-yadav12" title="codepen"><i class="fab fa-codepen"></i></a>
                     <a href="https://www.instagram.com/akkasshh__/" title="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:akashrsy123@gmail.com" title="mail"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
 
@@ -89,32 +90,30 @@
         <div class="skill-container">
             <ul>
                 <li data-target-tab="#Web" class="active">Web Development</li>
-                <li data-target-tab="#Prog">Programming</li>
-                <!-- <li data-target="CS">Computer Science</li> -->
+                <li data-target-tab="#Prog">Core CS</li>
                 <li data-target-tab="#Other">Other Skills</li>
             </ul>
             <div class="tab-content">
                 <div class="content active" id="Web">
-                    Proficient in client side technology i.e HTML, CSS, Javascript.<br>
-                    Also have a good understanding of server side technology namely Nodejs, Expressjs.<br>
+                    Proficient in client side technology i.e <span style="font-weight: bold;">HTML, CSS (SASS/SCSS), Javascript and React</span>,<br>
+                    Also have a good understanding of server side technology namely <span style="font-weight: bold;">Nodejs, Expressjs</span>.<br>
                     Have built some projects with these Tech stacks.<br>
                     <div class="skill-el">
-                        <span>JAVASCRIPT</span> <span>NODEJS</span>  <span>EXPRESS</span> <span>ANGULAR</span>
+                        <span>JAVASCRIPT</span> <span>REACT</span>  <span>NODEJS</span> <span>EXPRESS</span>
                     </div>
                 </div>
                 <div class="content" id="Prog">
-                    Proficient in programming languages such as python, C and Java.<br> Data science and Machine Learning Enthusiast(Learning).
-                    <br>
+                    Proficient in programming languages such as <span style="font-weight: bold;">Python, C++ and Java</span>.<br>
                     Proficient in common data structures such as the binary tree, binary search tree,<br> Linked list, stack, queue and Hash table(dictionary)
                     as well as thier associated algorithms.
                     <div class="skill-el">
-                        <span>PYTHON</span> <span>JAVA</span> <span>Data Science</span> <span>Data structure</span>
+                        <span>PYTHON</span> <span>JAVA</span> <span>C++</span> <span>DATA STRUCTURE</span>
                     </div>
                 </div>
                 <div class="content" id="Other">
                     In other skills,I have a good understanding of mongoDB(nosql) and mysql Database Technology.<br> Also have a good understanding of version control(GIT).
                     <div class="skill-el">
-                        <span>MongoDB</span> <span>Mysql</span> <span>GIT</span>
+                        <span>MONGODB</span> <span>MYSQL</span> <span>GIT</span>
                     </div>
                 </div>
             </div>
@@ -161,7 +160,7 @@
                 <div class="card-text">
                     <p class="title">Mybrary</p>
                     <p class="info">
-                        Add your favorite books on this web app and I'll read it, similarly I'll add my favorite books and you read it. This way we get acquainted with ton of books
+                        A book repository web app to add book cover with their author
                     </p>
                 </div>
                 <div class="card-tags">
@@ -251,13 +250,6 @@
             </div>
         </div>
     </section>
-    <!-- <section id="parallax" class="skills-par">
-        <img src="./images/1.png" data-speed="-5" class="layer">
-        <img src="./images/3.png" data-speed="2" class="layer">
-        <img src="./images/7.png" data-speed="4" class="layer">
-        <img src="./images/10.png" data-speed="-7" class="layer">
-        <img src="./images/11.png" data-speed="-5" class="layer">
-    </section> -->
 
     <section id="education">
         <div class="resume-box">
@@ -312,8 +304,8 @@
     <footer id="footer">
         <div class="content">
             <div class="footer-links">
-                <a href="#projects" title="view projects">Projects</a>
-                <a href="#skills" title="view skills">Skills</a>
+                <a href="#projects" title="view my projects">Projects</a>
+                <a href="#skills" title="read about me">About Me</a>
                 <a href="#education" title="view experience">Experience</a>
                 <a href="#main-cont" title="scroll to top">Move To Top</a>
             </div>
@@ -322,9 +314,9 @@
                     <p style="font-size:1.2rem; color:#ccc; margin-bottom:.6rem;">Connect with me on</p>
                 </div>
                 <a href="https://github.com/akash-yadav12" title="GITHUB"><i class="fab fa-github"></i></a>
-                <a href="https://codepen.io/akash-yadav12" title="codepen"><i class="fab fa-codepen"></i></a>
-                <!-- <a href="https://www.facebook.com/profile.php?id=100012470379669" title="FACEBOOK"><i class="fab fa-facebook-f"></i></a> -->
+                <a href="https://stackoverflow.com/users/13539130/soraku02" title="stackoverflow"><i class="fab fa-stack-overflow"></i></a>
                 <a href="https://www.linkedin.com/in/akash-yadav-b2b066170/" title="LINKEDIN"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://codepen.io/akash-yadav12" title="codepen"><i class="fab fa-codepen"></i></a>
                 <a href="https://www.instagram.com/akkasshh__/" title="INSTAGRAM"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:akashrsy123@gmail.com" title="GMAIL"><i class="fas fa-envelope"></i></a>
                 
