@@ -325,12 +325,12 @@ nav ul li a{
 .label .sun{
     position: absolute;
     fill: var(--toggle-color);
-    right: 2px;
+    left: 2px;
 }
 .label .moon{
     position: absolute;
     fill: var(--toggle-color);
-    left: 2px;
+    right: 2px;
 }
 
 /* projects */
@@ -918,6 +918,13 @@ nav ul li a{
     
 }
 
+
+@media (min-width:900px) {
+    
+    .skill-container ul{
+        width: 20%;
+    }
+}
 
 @media (max-width:1350px){
     nav ul{

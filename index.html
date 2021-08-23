@@ -11,7 +11,7 @@
 
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="dark">
 
 
     <section id="parallax">
@@ -30,22 +30,20 @@
                 <i class="fas fa-less-than"></i><span style="font-weight: 500;">AY</span>/<i class="fas fa-greater-than"></i>
             </div>
             <ul>
-                <li class="nav-link active"><a href="#main-cont" class="anchor">Home</a></li>
-                <li class="nav-link"><a href="#skills" class="anchor">About</a></li>
-                <li class="nav-link"><a href="#projects" class="anchor">Projects</a></li>
-                <li class="nav-link"><a href="#education" class="anchor">Experience</a></li>
+                <li class="nav-link active"><a href="#main-cont" class="anchor">Home &nbsp;<i class="fas fa-home"></i></a></li>
+                <li class="nav-link"><a href="#skills" class="anchor">About &nbsp;<i class="fas fa-info-circle"></i></a></li>
+                <li class="nav-link"><a href="#projects" class="anchor">Projects &nbsp;<i class="fas fa-gamepad"></i></a></li>
+                <li class="nav-link"><a href="#education" class="anchor">Edu/Exp <i class="fas fa-graduation-cap"></i></a></li>
                 <input type="checkbox" id="checkbox" title="Theme toggle">
                     <label for="checkbox" class="label">
-                        <svg class="sun" style="width:24px;height:24px" viewBox="0 0 24 24">
-                            <path d="M3.55,18.54L4.96,19.95L6.76,18.16L5.34,16.74M11,22.45C11.32,22.45 13,22.45 13,22.45V19.5H11M12,5.5A6,6 0 0,0 6,11.5A6,6 0 0,0 12,17.5A6,6 0 0,0 18,11.5C18,8.18 15.31,5.5 12,5.5M20,12.5H23V10.5H20M17.24,18.16L19.04,19.95L20.45,18.54L18.66,16.74M20.45,4.46L19.04,3.05L17.24,4.84L18.66,6.26M13,0.55H11V3.5H13M4,10.5H1V12.5H4M6.76,4.84L4.96,3.05L3.55,4.46L5.34,6.26L6.76,4.84Z" />
-                        </svg>
                         <svg class="moon" style="width:24px;height:24px" viewBox="0 0 24 24">
                             <path d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
                         </svg>
+                        <svg class="sun" style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path d="M3.55,18.54L4.96,19.95L6.76,18.16L5.34,16.74M11,22.45C11.32,22.45 13,22.45 13,22.45V19.5H11M12,5.5A6,6 0 0,0 6,11.5A6,6 0 0,0 12,17.5A6,6 0 0,0 18,11.5C18,8.18 15.31,5.5 12,5.5M20,12.5H23V10.5H20M17.24,18.16L19.04,19.95L20.45,18.54L18.66,16.74M20.45,4.46L19.04,3.05L17.24,4.84L18.66,6.26M13,0.55H11V3.5H13M4,10.5H1V12.5H4M6.76,4.84L4.96,3.05L3.55,4.46L5.34,6.26L6.76,4.84Z" />
+                        </svg>
                         <div class="ball"></div>
                     </label>
-
-                </button>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -68,8 +66,7 @@
                 <p class="me-about">A&nbsp; <span>Javascript Developer</span>&nbsp; who loves to code in Javascript.<br>
                      Also I have some serious liking towards <span>CSS</span></p>
                 <div id="explore">
-                    <a href="#projects">Explore &rarr;</a>
-                    <!-- <i class="fas fa-angle-right"></i> -->
+                    <a href="#projects">Explore <i class="fas fa-angle-right"></i></a>
                 </div>
                 <div class="social">
                     <a href="https://github.com/akash-yadav12" title="github"><i class="fab fa-github"></i></a>
@@ -83,14 +80,14 @@
 
         </div>
     </section>
-    <div id="scroll-down"><a href="#skills">Scroll Down &darr;</a></div>
+    <div id="scroll-down"><a href="#skills">Scroll Down <i class="fas fa-angle-double-down"></i></a></div>
     <!-- <i class="fas fa-angle-double-down"></i> -->
     <section id="skills">
 
         <div class="skill-container">
             <ul>
-                <li data-target-tab="#Web" class="active">Web Development</li>
-                <li data-target-tab="#Prog">Core CS</li>
+                <li data-target-tab="#Web" class="active">Web Dev</li>
+                <li data-target-tab="#Prog">CS</li>
                 <li data-target-tab="#Other">Other Skills</li>
             </ul>
             <div class="tab-content">
@@ -99,19 +96,19 @@
                     Also have a good understanding of server side technology namely <span style="font-weight: bold;">Nodejs, Expressjs</span>.<br>
                     Have built some projects with these Tech stacks.<br>
                     <div class="skill-el">
-                        <span>JAVASCRIPT</span> <span>REACT</span>  <span>NODEJS</span> <span>EXPRESS</span>
+                        <span>REACT</span>  <span>NODEJS</span> <span>EXPRESS</span> <span>MongoDB</span>
                     </div>
                 </div>
                 <div class="content" id="Prog">
                     Proficient in programming languages such as <span style="font-weight: bold;">Python, C++ and Java</span>.<br>
-                    Proficient in common data structures such as the binary tree, binary search tree,<br> Linked list, stack, queue and Hash table(dictionary)
+                    Have a strong hold over important data structures such as the binary tree, binary search tree,<br> Linked list, stack, queue and Hash table(dictionary)
                     as well as thier associated algorithms.
                     <div class="skill-el">
                         <span>PYTHON</span> <span>JAVA</span> <span>C++</span> <span>DATA STRUCTURE</span>
                     </div>
                 </div>
                 <div class="content" id="Other">
-                    In other skills,I have a good understanding of mongoDB(nosql) and mysql Database Technology.<br> Also have a good understanding of version control(GIT).
+                    I also have a good understanding of mongoDB(nosql) and mysql Database Technology.<br> Proficient in working with version control(GIT).
                     <div class="skill-el">
                         <span>MONGODB</span> <span>MYSQL</span> <span>GIT</span>
                     </div>
@@ -125,6 +122,20 @@
             <p style="font-size: 3rem; font-weight:bolder; text-align:center">My Projects</p>
         </div>
         <div class="card-container">
+            <div class="card">
+                <div class="card-text">
+                    <p class="title">Burger Builder</p>
+                    <p class="info">A web app which customizes burger with visual effects</p>
+                </div>
+                <div class="card-tags">
+                    <span>#React</span>
+                    <span>#Redux</span>
+                    <span>#Firebase</span>
+                </div>
+                <div class="card-links">
+                    <a href="https://github.com/akash-yadav12/Burger-Builder" title="Github link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-text">
                     <p class="title">Blog-site</p>
@@ -319,7 +330,7 @@
                 <a href="https://codepen.io/akash-yadav12" title="codepen"><i class="fab fa-codepen"></i></a>
                 <a href="https://www.instagram.com/akkasshh__/" title="INSTAGRAM"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:akashrsy123@gmail.com" title="GMAIL"><i class="fas fa-envelope"></i></a>
-                
+                <div class="nav-link" style="width: 70%; margin:7px auto; text-align: center; background-color: #000; padding:5px 0; border-radius: 4px;"><a href="resume/AkashYadavResume.pdf" target="_blank" style="text-decoration:none">Resume &nbsp; <i class="fas fa-file-pdf"></i></a></div>
             </div>
         </div>
         <div class="copyright">
