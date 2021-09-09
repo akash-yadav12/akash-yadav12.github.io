@@ -1101,8 +1101,10 @@ nav ul li a{
     }
     #footer{
         min-height: 50vh;
+        display: table;
     }
     #footer .content{
+        margin-bottom: 25px;
         flex-direction: column;
     }
     #footer .copyright{
