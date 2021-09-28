@@ -99,12 +99,14 @@ burger.addEventListener('click', () => {
 
 })
 
+
+
 function parallax(e) {
     document.querySelectorAll('.layer').forEach(layer => {
         const speed = layer.getAttribute('data-speed')
 
-        const x = (window.innerWidth - e.pageX * speed) / 100
-        const y = (window.innerHeight - e.pageY * speed) / 100
+        const x = (window.innerWidth - (e.pageX % window.innerWidth) * speed) / 100
+        const y = (window.innerHeight - (e.pageY % window.innerHeight) * speed) / 100
 
         layer.style.opacity = `0.7`
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
