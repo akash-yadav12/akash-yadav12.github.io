@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown, Terminal, Layers, Cpu, ShieldCheck } from 'lucide-react';
+import { ArrowDown, Terminal, Layers, Cpu, Brain } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 export const Hero: React.FC = () => {
@@ -300,13 +300,13 @@ export const Hero: React.FC = () => {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
-            <ShieldCheck size={20} color="var(--accent-amber)" />
+            <Brain size={20} color="var(--accent-amber)" />
             <div>
               <div className="mono" style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>
-                VERIFICATION
+                BEYOND CODE
               </div>
               <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>
-                100% Authentic History
+                Sports, Problem Solving & Metacognition
               </div>
             </div>
           </div>

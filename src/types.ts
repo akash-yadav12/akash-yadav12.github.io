@@ -26,6 +26,8 @@ export interface CareerMilestone {
   verifiedDomains: string[];
   keyScope: string;
   evidenceTier: 'User-confirmed professional experience' | 'Repository / project-confirmed experience';
+  award?: string;
+  highlights?: string[];
   deliverables?: string[];
   technologies: string[];
 }

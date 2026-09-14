@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GraduationCap, Award, Compass, MapPin } from 'lucide-react';
+import { GraduationCap, Award, Activity, Brain } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 export const AboutOrigins: React.FC = () => {
@@ -111,10 +111,14 @@ export const AboutOrigins: React.FC = () => {
             </p>
 
             <p style={{ fontSize: '0.925rem', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-              Progressing to <strong>ISS</strong> and subsequently <strong>JPMorgan Chase</strong>, I worked on mission-critical enterprise systems where reliability, high throughput, and security were non-negotiable. Today at <strong>Oracle</strong> as a <strong>Senior Member of Technical Staff</strong>, I focus on distributed systems, backend architectures, and engineering infrastructure.
+              Progressing through <strong>Institutional Shareholder Services (ISS)</strong> and <strong>JPMorgan Chase (JPMC)</strong>, I engineered high-throughput Java microservices, architected Kafka-based migration pipelines moving 2M+ records to AWS S3, and built in-IDE RAG Copilot agents. Beginning October 2026, I step into <strong>Oracle</strong> as a <strong>Senior Member of Technical Staff (SMTS)</strong> to build multi-tenant cloud services.
             </p>
 
-            {/* Academic & Foundation Credentials */}
+            <p style={{ fontSize: '0.925rem', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+              Beyond software systems, I have an insatiable drive for physical and cognitive challenge. I am an avid sports enthusiast—actively playing basketball, volleyball, and cricket, and competing in distance running—which cultivates endurance, rapid decision-making, and teamwork under pressure. Simultaneously, I am fascinated by <strong>metacognition</strong>: analyzing my own cognitive processes, deconstructing problem-solving frameworks, and continually refining how I learn and reason through complex engineering architectures.
+            </p>
+
+            {/* Academic, Athletic & Cognitive Foundations */}
             <div
               style={{
                 display: 'grid',
@@ -132,7 +136,7 @@ export const AboutOrigins: React.FC = () => {
                     B.Tech, Information Technology
                   </div>
                   <div className="mono" style={{ fontSize: '0.675rem', color: 'var(--text-muted)' }}>
-                    KJSIEIT · 2018–2022
+                    KJ Somaiya Institute of Technology
                   </div>
                 </div>
               </div>
@@ -144,31 +148,31 @@ export const AboutOrigins: React.FC = () => {
                     Academic Distinction
                   </div>
                   <div className="mono" style={{ fontSize: '0.675rem', color: 'var(--text-muted)' }}>
-                    Graduated with 8.87 CGPI
+                    Graduated with 9.23 / 10 CGPA
                   </div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
-                <Compass size={16} color="var(--accent-indigo)" />
+                <Activity size={16} color="var(--accent-amber)" />
                 <div>
                   <div className="mono" style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-primary)' }}>
-                    Competitive Problem Solving
+                    Multi-Sport Athletics
                   </div>
                   <div className="mono" style={{ fontSize: '0.675rem', color: 'var(--text-muted)' }}>
-                    LeetCode · StackOverflow · C++
+                    Basketball · Cricket · Distance Running
                   </div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
-                <MapPin size={16} color="var(--accent-amber)" />
+                <Brain size={16} color="var(--accent-indigo)" />
                 <div>
                   <div className="mono" style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-primary)' }}>
-                    Current Location
+                    Problem Solving & Metacognition
                   </div>
                   <div className="mono" style={{ fontSize: '0.675rem', color: 'var(--text-muted)' }}>
-                    India · Operating Globally
+                    Cognitive Models & Algorithmic Puzzles
                   </div>
                 </div>
               </div>

@@ -2,6 +2,82 @@ import { ProjectItem } from '../types';
 
 export const projectItems: ProjectItem[] = [
   {
+    id: 'jpmc-kafka-migration',
+    title: 'Enterprise Kafka Migration & Resiliency Pipeline',
+    tagline: 'Production Java 17+ microservice migrating 2M+ records from Oracle DB to AWS S3',
+    category: 'Systems & Developer Tools',
+    evolutionStage: 'Engineering Systems',
+    summary:
+      'Architected, deployed, and owned the end-to-end Kafka-based data migration pipeline at JPMorgan Chase. Migrated 2M+ records across three business domains into AWS S3 and JPMC’s internal Mercury S3 storage to advance the firm’s data product architecture.',
+    problem:
+      'High-volume database records needed to be continuously published to object storage without message loss or consumer lag during transient downstream outages.',
+    solution:
+      'Engineered a REST-integrated Java microservice with multiple Kafka consumers, Control-M automated batch scheduling, and custom retry/resiliency patterns to guarantee zero message loss and fault-tolerant data publication.',
+    technologies: ['Java 17+', 'Spring Boot', 'Apache Kafka', 'AWS S3', 'Mercury S3', 'Control-M', 'Oracle DB'],
+    keyDecisions: [
+      'Implemented custom consumer retry/resiliency pattern to handle transient Kafka delivery failures automatically.',
+      'Configured Control-M automated scheduling to balance batch execution throughout the day and eliminate storage write spikes.',
+      'Delivered the entire pipeline from requirements through design to production within 6 months.',
+    ],
+    metrics: [
+      { label: 'Records Migrated', value: '2M+' },
+      { label: 'Delivery Timeline', value: '6 Months' },
+      { label: 'Domains Supported', value: '3 Business Domains' },
+    ],
+    featured: true,
+  },
+  {
+    id: 'jpmc-rag-copilot-agent',
+    title: 'In-IDE RAG Agent & Copilot Skill Framework',
+    tagline: 'Vector-augmented developer productivity tooling boosting engineering velocity by 30%',
+    category: 'Systems & Developer Tools',
+    evolutionStage: 'Engineering Systems',
+    summary:
+      'Designed and built an in-IDE RAG-based knowledge retrieval agent integrating an enterprise vector datastore into GitHub Copilot at JPMorgan Chase. Engineered reusable Copilot skill patterns for Confluence and internal documentation portals. Recognized with 4 Star Performer Awards.',
+    problem:
+      'Engineers were losing valuable coding hours searching through dispersed Confluence pages, internal wikis, and legacy contract documents to resolve technical blockers.',
+    solution:
+      'Leveraged agentic AI workflows and vector embeddings to surface real-time technical answers with cited documentation directly inside the IDE, cutting developer research time by 70%.',
+    technologies: ['RAG Architecture', 'Vector Databases', 'GitHub Copilot Skills', 'AI Agents', 'Java', 'TypeScript'],
+    keyDecisions: [
+      'Engineered deterministic skill contracts allowing Copilot to query internal documentation securely.',
+      'Architected the Gossip Agent — a Stack Overflow-style knowledge tool embedded within GitHub Copilot.',
+      'Constructed an AI-driven document ingestion framework for the KYC platform across 10+ document types.',
+    ],
+    metrics: [
+      { label: 'Productivity Boost', value: '+30%' },
+      { label: 'Research Time Reduction', value: '70%' },
+      { label: 'Star Performer Awards', value: '4 Times' },
+    ],
+    featured: true,
+  },
+  {
+    id: 'iss-simfund-modernization',
+    title: 'Simfund Platform Modernization & Java Library',
+    tagline: 'Legacy C to API-first microservices migration & company-wide annotation library',
+    category: 'Systems & Developer Tools',
+    evolutionStage: 'Engineering Systems',
+    summary:
+      'Led the architectural migration of the Simfund analytics platform at ISS from a legacy C architecture to a scalable, API-first microservices ecosystem in Java/Spring Boot and React. Developed a custom annotation-based exception library that achieved an 18% code reduction company-wide.',
+    problem:
+      'Monolithic legacy C code hindered release velocity, increased boilerplate exception handling, and bottlenecked front-end modernizations.',
+    solution:
+      'Decoupled monolithic services into RESTful microservices, engineered an annotation-based exception handling library, containerized services with Docker (-60% deploy time), and parallelized CI build pipelines (+60% build efficiency).',
+    technologies: ['Java', 'Spring Boot', 'Micronaut', 'React', 'Docker', 'GitLab CI', 'SQL Server'],
+    keyDecisions: [
+      'Created custom annotation-based exception handling library adopted across company-wide Java projects.',
+      'Engineered high-throughput FTL-to-JSON report rendering service powering 50k+ weekly downloads.',
+      'Facilitated Redux architecture workshop for 14+ engineers to align on state management standards.',
+    ],
+    metrics: [
+      { label: 'User Engagement', value: '+20%' },
+      { label: 'Codebase Reduction', value: '18%' },
+      { label: 'Deployment Time', value: '-60%' },
+      { label: 'Weekly Report Downloads', value: '50k+' },
+    ],
+    featured: true,
+  },
+  {
     id: 'box-shadow-editor',
     title: 'Visual Box-Shadow Editor',
     tagline: 'Interactive DOM layout utility for real-time CSS elevation modeling',
@@ -39,7 +115,7 @@ export const projectItems: ProjectItem[] = [
       'Normalized relational schemas to handle multi-department faculty assignments.',
       'Constructed modular administrative portals tailored to non-technical institutional users.',
     ],
-    featured: true,
+    featured: false,
   },
   {
     id: 'burger-builder',
@@ -59,7 +135,7 @@ export const projectItems: ProjectItem[] = [
       'Integrated Firebase REST endpoints for authentication tokens and transactional order logging.',
     ],
     githubUrl: 'https://github.com/akash-yadav12/Burger-Builder',
-    featured: true,
+    featured: false,
   },
   {
     id: 'web-of-news',
@@ -74,22 +150,6 @@ export const projectItems: ProjectItem[] = [
     solution:
       'Built a Node.js/Express backend proxying outbound API requests, normalizing payloads, and caching responses to optimize client-side load times.',
     technologies: ['Node.js', 'Express', 'REST APIs', 'CSS3', 'JavaScript'],
-    githubUrl: 'https://github.com/akash-yadav12/Web-of-News',
-    featured: false,
-  },
-  {
-    id: 'mybrary',
-    title: 'Mybrary Repository',
-    tagline: 'Document cataloging and relational book repository engine',
-    category: 'Full-Stack Applications',
-    evolutionStage: 'Full-Stack Architecture',
-    summary:
-      'A full-stack cataloging application designed for indexing literary metadata, book cover assets, author relationships, and categorical filters.',
-    problem:
-      'Handling binary file uploads, thumbnail transformations, and author entity relations cleanly in a NoSQL database.',
-    solution:
-      'Implemented MongoDB schema modeling with Mongoose, file streaming pipelines, and server-rendered dynamic views.',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'Mongoose', 'EJS'],
     githubUrl: 'https://github.com/akash-yadav12/Web-of-News',
     featured: false,
   },

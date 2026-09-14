@@ -1,13 +1,10 @@
 import React from 'react';
-import { Mail, ShieldCheck, FileText } from 'lucide-react';
+import { Download, ExternalLink, ShieldCheck, Mail } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 export const ResumeSection: React.FC = () => {
-  const resumeSubject = encodeURIComponent('Request for Akash Yadav Updated Résumé');
-  const resumeBody = encodeURIComponent(
-    'Hi Akash,\n\nI came across your engineering portfolio and would like to request a copy of your updated Senior Member of Technical Staff résumé.\n\nBest regards,'
-  );
-  const requestMailto = `mailto:${profileData.email}?subject=${resumeSubject}&body=${resumeBody}`;
+  const resumePdfPath = './resume/Akash_Yadav_Resume.pdf';
+  const requestMailto = `mailto:${profileData.email}?subject=Request%20for%20Akash%20Yadav%20R%C3%A9sum%C3%A9`;
 
   return (
     <section id="resume" className="section-padding" style={{ borderBottom: '1px solid var(--border-subtle)' }}>
@@ -28,7 +25,7 @@ export const ResumeSection: React.FC = () => {
         >
           <div style={{ maxWidth: '640px' }}>
             <div className="badge badge-emerald" style={{ marginBottom: 'var(--space-3)' }}>
-              <ShieldCheck size={13} /> PROFESSIONAL CREDENTIALS
+              <ShieldCheck size={13} /> VERIFIED DOSSIER
             </div>
             <h2
               style={{
@@ -39,17 +36,17 @@ export const ResumeSection: React.FC = () => {
                 marginBottom: 'var(--space-2)',
               }}
             >
-              Curriculum Vitae & Technical Dossier
+              Curriculum Vitae & Technical Credentials
             </h2>
             <p style={{ fontSize: '0.925rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>
-              Comprehensive documentation of professional milestones across <strong>Oracle</strong>, <strong>JPMorgan Chase</strong>, and <strong>ISS</strong>. Updated comprehensive résumé reflecting senior engineering deliverables is available directly on request.
+              Comprehensive documentation of professional milestones across <strong>Oracle</strong> (Senior MTS), <strong>JPMorgan Chase</strong> (Kafka migration, DMN rules engines, RAG agents, 4x Star Performer), and <strong>ISS</strong> (Simfund microservices migration, custom Java libraries).
             </p>
 
             <div
               className="mono"
               style={{
                 fontSize: '0.75rem',
-                color: 'var(--text-muted)',
+                color: 'var(--accent-emerald)',
                 marginTop: 'var(--space-3)',
                 display: 'flex',
                 alignItems: 'center',
@@ -65,25 +62,36 @@ export const ResumeSection: React.FC = () => {
                   display: 'inline-block',
                 }}
               />
-              Updated Senior MTS Résumé available via verified request
+              Official Résumé (PDF) updated & available for download
             </div>
           </div>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-3)' }}>
             <a
-              href={requestMailto}
+              href={resumePdfPath}
+              download="Akash_Yadav_Resume.pdf"
               className="btn btn-primary"
-              data-cursor-text="REQUEST"
+              data-cursor-text="DOWNLOAD"
               style={{ padding: '0.8rem 1.4rem' }}
             >
-              <Mail size={16} /> Request Updated Résumé
+              <Download size={16} /> Download Résumé (PDF)
             </a>
             <a
-              href="#career"
+              href={resumePdfPath}
+              target="_blank"
+              rel="noreferrer noopener"
               className="btn btn-outline"
+              data-cursor-text="VIEW"
               style={{ padding: '0.8rem 1.2rem' }}
             >
-              <FileText size={16} /> View Trajectory Online
+              <ExternalLink size={16} /> Open PDF Viewer
+            </a>
+            <a
+              href={requestMailto}
+              className="btn btn-ghost"
+              style={{ padding: '0.8rem 1rem', fontSize: '0.825rem' }}
+            >
+              <Mail size={15} /> Direct Contact
             </a>
           </div>
         </div>

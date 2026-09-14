@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Building2, Calendar, MapPin, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Building2, Calendar, MapPin, CheckCircle2, ChevronRight, Award, Sparkles } from 'lucide-react';
 import { careerMilestones } from '../data/experience';
 import { CareerMilestone } from '../types';
 
@@ -266,7 +266,7 @@ export const CareerTrajectory: React.FC = () => {
                 borderRadius: 'var(--radius-md)',
                 background: 'rgba(255, 255, 255, 0.02)',
                 border: '1px solid var(--border-subtle)',
-                marginBottom: 'var(--space-6)',
+                marginBottom: 'var(--space-5)',
               }}
             >
               <div
@@ -285,6 +285,67 @@ export const CareerTrajectory: React.FC = () => {
                 {activeMilestone.keyScope}
               </div>
             </div>
+
+            {/* Award Recognition (if present) */}
+            {activeMilestone.award && (
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 'var(--space-3)',
+                  padding: 'var(--space-3) var(--space-4)',
+                  borderRadius: 'var(--radius-md)',
+                  background: 'rgba(251, 191, 36, 0.08)',
+                  border: '1px solid rgba(251, 191, 36, 0.3)',
+                  marginBottom: 'var(--space-5)',
+                }}
+              >
+                <Award size={18} color="var(--accent-amber)" />
+                <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--accent-amber)' }}>
+                  {activeMilestone.award}
+                </span>
+              </div>
+            )}
+
+            {/* Key Deliverables & Production Impact (if present) */}
+            {activeMilestone.deliverables && activeMilestone.deliverables.length > 0 && (
+              <div style={{ marginBottom: 'var(--space-6)' }}>
+                <div
+                  className="mono"
+                  style={{
+                    fontSize: '0.725rem',
+                    color: 'var(--text-muted)',
+                    letterSpacing: '0.08em',
+                    marginBottom: 'var(--space-3)',
+                    textTransform: 'uppercase',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                  }}
+                >
+                  <Sparkles size={13} color="var(--accent-cyan)" /> Key Engineering Accomplishments
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+                  {activeMilestone.deliverables.map((deliv, i) => (
+                    <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--space-3)' }}>
+                      <span
+                        style={{
+                          width: '5px',
+                          height: '5px',
+                          borderRadius: '50%',
+                          background: 'var(--accent-cyan)',
+                          marginTop: '0.5rem',
+                          flexShrink: 0,
+                        }}
+                      />
+                      <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
+                        {deliv}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Verified Engineering Domains */}
             <div style={{ marginBottom: 'var(--space-6)' }}>
